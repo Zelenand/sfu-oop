@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="387.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pr13_3.TableController">
+   <children>
+      <TableView fx:id="recordTable" layoutX="15.0" layoutY="14.0" prefHeight="220.0" prefWidth="662.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="41.60003662109375" text="id" />
+            <TableColumn fx:id="nameCol" prefWidth="114.39996337890625" text="Название" />
+            <TableColumn fx:id="quantityCol" prefWidth="75.20001220703125" text="Количество" />
+            <TableColumn fx:id="ownerTypeCol" prefWidth="100.00006103515625" text="Тип владельца" />
+            <TableColumn fx:id="ownerCol" prefWidth="108.79998779296875" text="Владелец" />
+            <TableColumn fx:id="contactCol" prefWidth="128.80001831054688" text="Контакт" />
+            <TableColumn fx:id="expiryCol" prefWidth="91.20001220703125" text="Срок" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

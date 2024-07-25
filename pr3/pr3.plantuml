@@ -1,0 +1,63 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class Flat {
+  + Flat(): 
+  + Flat(String, int, int, boolean): 
+  - balconyExist: boolean
+  - roomsNum: int
+  + hashCode(): int
+  + setRoomsNum(int): void
+  + getBalconyExist(): boolean
+  + getRoomsNum(): int
+  + setBalconyExist(boolean): void
+  + equals(Object): boolean
+  + toString(): String
+}
+class Garage {
+  + Garage(String, int, boolean, boolean): 
+  + Garage(): 
+  - basementExist: boolean
+  - pitExist: boolean
+  + getPitExist(): boolean
+  + hashCode(): int
+  + getbasementExist(): boolean
+  + setPitExist(boolean): void
+  + toString(): String
+  + equals(Object): boolean
+  + setBasementExist(boolean): void
+}
+class House {
+  + House(String, int, int, boolean): 
+  + House(): 
+  - atticExist: boolean
+  - floorsNum: int
+  + getAtticExist(): boolean
+  + getFloorsNum(): int
+  + equals(Object): boolean
+  + setFloorsNum(int): void
+  + hashCode(): int
+  + toString(): String
+  + setAtticExist(boolean): void
+}
+class Structure {
+  + Structure(): 
+  + Structure(String, int): 
+  - price: int
+  - address: String
+  + toString(): String
+  + setAddress(String): void
+  + getAddress(): String
+  + setPrice(int): void
+  + getPrice(): int
+  + equals(Object): boolean
+  + hashCode(): int
+}
+
+Flat       -[#000082,plain]-^  Structure 
+Garage     -[#000082,plain]-^  Structure 
+House      -[#000082,plain]-^  Structure 
+@enduml

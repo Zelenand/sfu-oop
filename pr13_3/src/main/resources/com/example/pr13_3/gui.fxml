@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="639.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pr13_3.GUIController">
+   <children>
+      <ListView fx:id="recordList" layoutX="20.0" layoutY="25.0" prefHeight="138.0" prefWidth="130.0" />
+      <Button fx:id="showButton" layoutX="172.0" layoutY="32.0" mnemonicParsing="false" onAction="#onShowButtonClick" prefHeight="26.0" prefWidth="143.0" text="Отобразить запись" />
+      <Button fx:id="deleteButton" layoutX="172.0" layoutY="125.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="26.0" prefWidth="143.0" text="Удалить запись" />
+      <Button fx:id="addButton" layoutX="513.0" layoutY="599.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="26.0" prefWidth="143.0" text="Добавить запись" />
+      <Button fx:id="showAllButton" layoutX="172.0" layoutY="67.0" mnemonicParsing="false" onAction="#onShowAllButtonClick" text="Отобразить все записи" />
+      <Label layoutX="364.0" layoutY="14.0" prefHeight="18.0" prefWidth="150.0" text="Запрос отчёта" />
+      <Button fx:id="reportButton" layoutX="363.0" layoutY="125.0" mnemonicParsing="false" onAction="#onReportButtonClick" prefHeight="26.0" prefWidth="150.0" text="Вывести отчёт" />
+      <Label fx:id="reportLabel" layoutX="364.0" layoutY="71.0" prefHeight="18.0" prefWidth="150.0" />
+      <TextField fx:id="reportField" disable="true" layoutX="364.0" layoutY="94.0" />
+      <Label fx:id="label11" layoutX="20.0" layoutY="463.0" prefHeight="18.0" prefWidth="150.0" text="Добавление записи" />
+      <Label fx:id="label111" layoutX="20.0" layoutY="487.0" prefHeight="18.0" prefWidth="150.0" text="Название предмета" />
+      <Label fx:id="ownerLabel" layoutX="510.0" layoutY="487.0" prefHeight="18.0" prefWidth="150.0" text="Название владельца" />
+      <Label fx:id="label1121" layoutX="188.0" layoutY="487.0" prefHeight="18.0" prefWidth="150.0" text="Количество" />
+      <Label fx:id="label1122" layoutX="366.0" layoutY="487.0" prefHeight="18.0" prefWidth="150.0" text="Тип владельца" />
+      <TextField fx:id="itemField" layoutX="20.0" layoutY="505.0" />
+      <TextField fx:id="quantityField" layoutX="188.0" layoutY="504.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="ownerField" layoutX="510.0" layoutY="505.0" />
+      <Label fx:id="contactLabel" layoutX="510.0" layoutY="536.0" prefHeight="18.0" prefWidth="150.0" />
+      <TextField fx:id="contactField" disable="true" layoutX="510.0" layoutY="559.0" />
+      <Label fx:id="label11221" layoutX="20.0" layoutY="541.0" prefHeight="18.0" prefWidth="150.0" text="Тип хранения" />
+      <Label fx:id="dateLabel" disable="true" layoutX="187.0" layoutY="541.0" prefHeight="18.0" prefWidth="150.0" text="Дата окончания хранения" />
+      <DatePicker fx:id="datePicker" disable="true" layoutX="187.0" layoutY="559.0" prefHeight="26.0" prefWidth="150.0" />
+      <ComboBox fx:id="expiryTypeBox" layoutX="20.0" layoutY="559.0" onAction="#onExpiryTypeBoxAction" prefWidth="150.0" />
+      <ComboBox fx:id="reportBox" layoutX="364.0" layoutY="37.0" onAction="#onReportBoxAction" prefWidth="150.0" />
+      <ComboBox fx:id="ownerTypeBox" layoutX="366.0" layoutY="504.0" onAction="#onOwnerTypeBoxAction" prefHeight="26.0" prefWidth="130.0" />
+      <Label fx:id="addErrorLabel" layoutX="509.0" layoutY="420.0" prefHeight="18.0" prefWidth="150.0" />
+      <TableView fx:id="reportTable" layoutX="20.0" layoutY="193.0" prefHeight="257.0" prefWidth="662.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="41.60003662109375" text="id" />
+            <TableColumn fx:id="itemCol" prefWidth="114.39996337890625" text="Название" />
+            <TableColumn fx:id="quantityCol" prefWidth="75.20001220703125" text="Количество" />
+            <TableColumn fx:id="ownerTypeCol" prefWidth="100.00006103515625" text="Тип владельца" />
+            <TableColumn fx:id="ownerCol" prefWidth="108.79998779296875" text="Владелец" />
+            <TableColumn fx:id="contactCol" prefWidth="128.80001831054688" text="Контакт" />
+            <TableColumn fx:id="expiryCol" prefWidth="91.20001220703125" text="Срок" />
+         </columns>
+      </TableView>
+      <Label layoutX="19.0" layoutY="174.0" prefHeight="18.0" prefWidth="150.0" text="Отчёт" />
+      <Label layoutX="20.0" layoutY="4.0" prefHeight="18.0" prefWidth="150.0" text="Список записей хранения" />
+   </children>
+</AnchorPane>
